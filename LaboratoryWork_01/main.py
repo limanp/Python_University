@@ -11,8 +11,8 @@ myList = [a + b, b - c, c / d, d * a, b % c, d // b, c ** a]
 sizeList = len(myList)
 
 for i in range(sizeList):
-    if(myList[i] % 2 == 0):
-        print(myList[i])
+   if(myList[i] % 2 == 0):
+      print(myList[i])
 
 # Task_04 -----------------------------------------------------
 print(myList)
