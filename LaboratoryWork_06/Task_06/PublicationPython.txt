@@ -1,0 +1,263 @@
+If you’ve bought this book, you may already know what Python is and why it’s an
+important tool to learn. If you don’t, you probably won’t be sold on Python until you’ve
+learned the language by reading the rest of this book and have done a project or two.
+But before we jump into details, the first few pages of this book will briefly introduce
+some of the main reasons behind Python’s popularity. To begin sculpting a definition
+of Python, this chapter takes the form of a question-and-answer session, which poses
+some of the most common questions asked by beginners.
+Why Do People Use Python?
+Because there are many programming languages available today, this is the usual first
+question of newcomers. Given that there are roughly 1 million Python users out there
+at the moment, there really is no way to answer this question with complete accuracy;
+the choice of development tools is sometimes based on unique constraints or personal
+preference.
+But after teaching Python to roughly 225 groups and over 3,000 students during the
+last 12 years, some common themes have emerged. The primary factors cited by Python
+users seem to be these:
+Software quality
+For many, Python’s focus on readability, coherence, and software quality in general
+sets it apart from other tools in the scripting world. Python code is designed to be
+readable, and hence reusable and maintainable—much more so than traditional
+scripting languages. The uniformity of Python code makes it easy to understand,
+even if you did not write it. In addition, Python has deep support for more advanced
+software reuse mechanisms, such as object-oriented programming (OOP).
+Developer productivity
+Python boosts developer productivity many times beyond compiled or statically
+typed languages such as C, C++, and Java. Python code is typically one-third to
+one-fifth the size of equivalent C++ or Java code. That means there is less to type,
+less to debug, and less to maintain after the fact. Python programs also run immediately, without the lengthy compile and link steps required by some other tools,
+further boosting programmer speed.
+Program portability
+Most Python programs run unchanged on all major computer platforms. Porting
+Python code between Linux and Windows, for example, is usually just a matter of
+copying a script’s code between machines. Moreover, Python offers multiple options for coding portable graphical user interfaces, database access programs, webbased systems, and more. Even operating system interfaces, including program
+launches and directory processing, are as portable in Python as they can possibly
+be.
+Support libraries
+Python comes with a large collection of prebuilt and portable functionality, known
+as the standard library. This library supports an array of application-level programming tasks, from text pattern matching to network scripting. In addition,
+Python can be extended with both homegrown libraries and a vast collection of
+third-party application support software. Python’s third-party domain offers tools
+for website construction, numeric programming, serial port access, game development, and much more. The NumPy extension, for instance, has been described
+as a free and more powerful equivalent to the Matlab numeric programming
+system.
+Component integration
+Python scripts can easily communicate with other parts of an application, using a
+variety of integration mechanisms. Such integrations allow Python to be used as a
+product customization and extension tool. Today, Python code can invoke C and
+C++ libraries, can be called from C and C++ programs, can integrate with Java
+and .NET components, can communicate over frameworks such as COM, can
+interface with devices over serial ports, and can interact over networks with interfaces like SOAP, XML-RPC, and CORBA. It is not a standalone tool.
+Enjoyment
+Because of Python’s ease of use and built-in toolset, it can make the act of programming more pleasure than chore. Although this may be an intangible benefit,
+its effect on productivity is an important asset.
+Of these factors, the first two (quality and productivity) are probably the most compelling benefits to most Python users.
+Software Quality
+By design, Python implements a deliberately simple and readable syntax and a highly
+coherent programming model. As a slogan at a recent Python conference attests, the
+net result is that Python seems to “fit your brain”—that is, features of the language
+interact in consistent and limited ways and follow naturally from a small set of core
+concepts. This makes the language easier to learn, understand, and remember. In practice, Python programmers do not need to constantly refer to manuals when reading or
+writing code; it’s a consistently designed system that many find yields surprisingly
+regular-looking code.
+By philosophy, Python adopts a somewhat minimalist approach. This means that although there are usually multiple ways to accomplish a coding task, there is usually
+just one obvious way, a few less obvious alternatives, and a small set of coherent interactions everywhere in the language. Moreover, Python doesn’t make arbitrary decisions for you; when interactions are ambiguous, explicit intervention is preferred over
+“magic.” In the Python way of thinking, explicit is better than implicit, and simple is
+better than complex.*
+Beyond such design themes, Python includes tools such as modules and OOP that
+naturally promote code reusability. And because Python is focused on quality, so too,
+naturally, are Python programmers.
+Developer Productivity
+During the great Internet boom of the mid-to-late 1990s, it was difficult to find enough
+programmers to implement software projects; developers were asked to implement
+systems as fast as the Internet evolved. Today, in an era of layoffs and economic recession, the picture has shifted. Programming staffs are often now asked to accomplish
+the same tasks with even fewer people.
+In both of these scenarios, Python has shined as a tool that allows programmers to get
+more done with less effort. It is deliberately optimized for speed of development—its
+simple syntax, dynamic typing, lack of compile steps, and built-in toolset allow programmers to develop programs in a fraction of the time needed when using some other
+tools. The net effect is that Python typically boosts developer productivity many times
+beyond the levels supported by traditional languages. That’s good news in both boom
+and bust times, and everywhere the software industry goes in between.
+Is Python a “Scripting Language”?
+Python is a general-purpose programming language that is often applied in scripting
+roles. It is commonly defined as an object-oriented scripting language—a definition that
+blends support for OOP with an overall orientation toward scripting roles. In fact,
+people often use the word “script” instead of “program” to describe a Python code file.
+In this book, the terms “script” and “program” are used interchangeably, with a slight
+preference for “script” to describe a simpler top-level file and “program” to refer to a
+more sophisticated multifile application.
+Because the term “scripting language” has so many different meanings to different
+observers, some would prefer that it not be applied to Python at all. In fact, people tend
+to make three very different associations, some of which are more useful than others,
+when they hear Python labeled as such:
+Shell tools
+Sometimes when people hear Python described as a scripting language, they think
+it means that Python is a tool for coding operating-system-oriented scripts. Such
+programs are often launched from console command lines and perform tasks such
+as processing text files and launching other programs.
+Python programs can and do serve such roles, but this is just one of dozens of
+common Python application domains. It is not just a better shell-script language.
+Control language
+To others, scripting refers to a “glue” layer used to control and direct (i.e., script)
+other application components. Python programs are indeed often deployed in the
+context of larger applications. For instance, to test hardware devices, Python programs may call out to components that give low-level access to a device. Similarly,
+programs may run bits of Python code at strategic points to support end-user
+product customization without the need to ship and recompile the entire system’s
+source code.
+Python’s simplicity makes it a naturally flexible control tool. Technically, though,
+this is also just a common Python role; many (perhaps most) Python programmers
+code standalone scripts without ever using or knowing about any integrated components. It is not just a control language.
+Ease of use
+Probably the best way to think of the term “scripting language” is that it refers to
+a simple language used for quickly coding tasks. This is especially true when the
+term is applied to Python, which allows much faster program development than
+compiled languages like C++. Its rapid development cycle fosters an exploratory,
+incremental mode of programming that has to be experienced to be appreciated.
+Don’t be fooled, though—Python is not just for simple tasks. Rather, it makes tasks
+simple by its ease of use and flexibility. Python has a simple feature set, but it allows
+programs to scale up in sophistication as needed. Because of that, it is commonly
+used for quick tactical tasks and longer-term strategic development.
+So, is Python a scripting language or not? It depends on whom you ask. In general, the
+term “scripting” is probably best used to describe the rapid and flexible mode of development that Python supports, rather than a particular application domain.
+OK, but What’s the Downside?
+After using it for 17 years and teaching it for 12, the only downside to Python I’ve found
+is that, as currently implemented, its execution speed may not always be as fast as that
+of compiled languages such as C and C++.
+We’ll talk about implementation concepts in detail later in this book. In short, the
+standard implementations of Python today compile (i.e., translate) source code statements to an intermediate format known as byte code and then interpret the byte code.
+Byte code provides portability, as it is a platform-independent format. However, because Python is not compiled all the way down to binary machine code (e.g., instructions for an Intel chip), some programs will run more slowly in Python than in a fully
+compiled language like C.
+Whether you will ever care about the execution speed difference depends on what kinds
+of programs you write. Python has been optimized numerous times, and Python code
+runs fast enough by itself in most application domains. Furthermore, whenever you do
+something “real” in a Python script, like processing a file or constructing a graphical
+user interface (GUI), your program will actually run at C speed, since such tasks are
+immediately dispatched to compiled C code inside the Python interpreter. More fundamentally, Python’s speed-of-development gain is often far more important than any
+speed-of-execution loss, especially given modern computer speeds.
+Even at today’s CPU speeds, though, there still are some domains that do require optimal execution speeds. Numeric programming and animation, for example, often need
+at least their core number-crunching components to run at C speed (or better). If you
+work in such a domain, you can still use Python—simply split off the parts of the
+application that require optimal speed into compiled extensions, and link those into
+your system for use in Python scripts.
+We won’t talk about extensions much in this text, but this is really just an instance of
+the Python-as-control-language role we discussed earlier. A prime example of this dual
+language strategy is the NumPy numeric programming extension for Python; by combining compiled and optimized numeric extension libraries with the Python language,
+NumPy turns Python into a numeric programming tool that is efficient and easy to use.
+You may never need to code such extensions in your own Python work, but they provide
+a powerful optimization mechanism if you ever do.
+Who Uses Python Today?
+At this writing, the best estimate anyone can seem to make of the size of the Python
+user base is that there are roughly 1 million Python users around the world today (plus
+or minus a few). This estimate is based on various statistics, like download rates and
+developer surveys. Because Python is open source, a more exact count is difficult—
+there are no license registrations to tally. Moreover, Python is automatically included
+with Linux distributions, Macintosh computers, and some products and hardware,
+further clouding the user-base picture.
+In general, though, Python enjoys a large user base and a very active developer community. Because Python has been around for some 19 years and has been widely used,
+it is also very stable and robust. Besides being employed by individual users, Python is
+also being applied in real revenue-generating products by real companies. For instance:
+• Google makes extensive use of Python in its web search systems, and employs
+Python’s creator.
+• The YouTube video sharing service is largely written in Python.
+• The popular BitTorrent peer-to-peer file sharing system is a Python program.
+• Google’s popular App Engine web development framework uses Python as its application language.
+• EVE Online, a Massively Multiplayer Online Game (MMOG), makes extensive use
+of Python.
+• Maya, a powerful integrated 3D modeling and animation system, provides a
+Python scripting API.
+• Intel, Cisco, Hewlett-Packard, Seagate, Qualcomm, and IBM use Python for hardware testing.
+• Industrial Light & Magic, Pixar, and others use Python in the production of animated movies.
+• JPMorgan Chase, UBS, Getco, and Citadel apply Python for financial market
+forecasting.
+• NASA, Los Alamos, Fermilab, JPL, and others use Python for scientific programming tasks.
+• iRobot uses Python to develop commercial robotic devices.
+• ESRI uses Python as an end-user customization tool for its popular GIS mapping
+products.
+• The NSA uses Python for cryptography and intelligence analysis.
+• The IronPort email server product uses more than 1 million lines of Python code
+to do its job.
+• The One Laptop Per Child (OLPC) project builds its user interface and activity
+model in Python.
+And so on. Probably the only common thread amongst the companies using Python
+today is that Python is used all over the map, in terms of application domains. Its
+general-purpose nature makes it applicable to almost all fields, not just one. In fact, it’s
+safe to say that virtually every substantial organization writing software is using Python,
+whether for short-term tactical tasks, such as testing and administration, or for longterm strategic product development. Python has proven to work well in both modes.
+What Can I Do with Python?
+In addition to being a well-designed programming language, Python is useful for accomplishing real-world tasks—the sorts of things developers do day in and day out.
+It’s commonly used in a variety of domains, as a tool for scripting other components
+and implementing standalone programs. In fact, as a general-purpose language,
+Python’s roles are virtually unlimited: you can use it for everything from website development and gaming to robotics and spacecraft control.
+However, the most common Python roles currently seem to fall into a few broad categories. The next few sections describe some of Python’s most common applications
+today, as well as tools used in each domain. We won’t be able to explore the tools
+mentioned here in any depth—if you are interested in any of these topics, see the Python
+website or other resources for more details.
+Systems Programming
+Python’s built-in interfaces to operating-system services make it ideal for writing portable, maintainable system-administration tools and utilities (sometimes called shell
+tools). Python programs can search files and directory trees, launch other programs, do
+parallel processing with processes and threads, and so on.
+Python’s standard library comes with POSIX bindings and support for all the usual OS
+tools: environment variables, files, sockets, pipes, processes, multiple threads, regular
+expression pattern matching, command-line arguments, standard stream interfaces,
+shell-command launchers, filename expansion, and more. In addition, the bulk of Python’s system interfaces are designed to be portable; for example, a script that copies
+directory trees typically runs unchanged on all major Python platforms. The Stackless
+Python system, used by EVE Online, also offers advanced solutions to multiprocessing
+requirements.
+GUIs
+Python’s simplicity and rapid turnaround also make it a good match for graphical user
+interface programming. Python comes with a standard object-oriented interface to the
+Tk GUI API called tkinter (Tkinter in 2.6) that allows Python programs to implement
+portable GUIs with a native look and feel. Python/tkinter GUIs run unchanged on
+Microsoft Windows, X Windows (on Unix and Linux), and the Mac OS (both Classic
+and OS X). A free extension package, PMW, adds advanced widgets to the tkinter
+toolkit. In addition, the wxPython GUI API, based on a C++ library, offers an alternative
+toolkit for constructing portable GUIs in Python.
+Higher-level toolkits such as PythonCard and Dabo are built on top of base APIs such
+as wxPython and tkinter. With the proper library, you can also use GUI support in
+other toolkits in Python, such as Qt with PyQt, GTK with PyGTK, MFC with
+PyWin32, .NET with IronPython, and Swing with Jython (the Java version of Python,
+described in Chapter 2) or JPype. For applications that run in web browsers or have
+simple interface requirements, both Jython and Python web frameworks and serverside CGI scripts, described in the next section, provide additional user interface
+options.
+Internet Scripting
+Python comes with standard Internet modules that allow Python programs to perform
+a wide variety of networking tasks, in client and server modes. Scripts can communicate
+over sockets; extract form information sent to server-side CGI scripts; transfer files by
+FTP; parse, generate, and analyze XML files; send, receive, compose, and parse email;
+fetch web pages by URLs; parse the HTML and XML of fetched web pages; communicate over XML-RPC, SOAP, and Telnet; and more. Python’s libraries make these
+tasks remarkably simple.
+In addition, a large collection of third-party tools are available on the Web for doing
+Internet programming in Python. For instance, the HTMLGen system generates HTML
+files from Python class-based descriptions, the mod_python package runs Python efficiently within the Apache web server and supports server-side templating with its Python Server Pages, and the Jython system provides for seamless Python/Java integration
+and supports coding of server-side applets that run on clients.
+In addition, full-blown web development framework packages for Python, such as
+Django, TurboGears, web2py, Pylons, Zope, and WebWare, support quick construction
+of full-featured and production-quality websites with Python. Many of these include
+features such as object-relational mappers, a Model/View/Controller architecture,
+server-side scripting and templating, and AJAX support, to provide complete and
+enterprise-level web development solutions.
+Component Integration
+We discussed the component integration role earlier when describing Python as a control language. Python’s ability to be extended by and embedded in C and C++ systems
+makes it useful as a flexible glue language for scripting the behavior of other systems
+and components. For instance, integrating a C library into Python enables Python to
+test and launch the library’s components, and embedding Python in a product enables
+onsite customizations to be coded without having to recompile the entire product (or
+ship its source code at all).
+Tools such as the SWIG and SIP code generators can automate much of the work
+needed to link compiled components into Python for use in scripts, and the Cython
+system allows coders to mix Python and C-like code. Larger frameworks, such as Python’s COM support on Windows, the Jython Java-based implementation, the IronPython .NET-based implementation, and various CORBA toolkits for Python, provide
+alternative ways to script components. On Windows, for example, Python scripts can
+use frameworks to script Word and Excel.
+Database Programming
+For traditional database demands, there are Python interfaces to all commonly used
+relational database systems—Sybase, Oracle, Informix, ODBC, MySQL, PostgreSQL,
+SQLite, and more. The Python world has also defined a portable database API for accessing SQL database systems from Python scripts, which looks the same on a variety
+of underlying database systems. For instance, because the vendor interfaces implement
+the portable API, a script written to work with the free MySQL system will work largely
+unchanged on other systems (such as Oracle); all you have to do is replace the underlying vendor interface.
+Python’s standard pickle module provides a simple object persistence system—it allows
+programs to easily save and restore entire Python objects to files and file-like objects.
+On the Web, you’ll also find a third-party open source system named ZODB that provides a complete object-oriented database system for Python scripts, and others (such
+as SQLObject and SQLAlchemy) that map relational tables onto Python’s class model.
+Furthermore, as of Python 2.5, the in-process SQLite embedded SQL database engine
+is a standard part of Python itself.
