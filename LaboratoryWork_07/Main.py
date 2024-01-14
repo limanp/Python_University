@@ -31,9 +31,18 @@ class Person:
 
         return "{0} {1}".format(self._surname, self._first_name)
 
+def modifier(filename):
+    with open(filename, "r") as PersonFile:
+        data = PersonFile.read().split("\n")
+        person = Person(data[0], data[1], data[2], data[3])
+        pass
+
+
 
 if __name__ == "__main__":
-    b_date = datetime.date(2002, 7, 14)
-    person = Person("Liman", "Pavlo", "2002-07-14", "LiPa")
-    print(person.get_age())
-    print(person.get_fullname())
+   # b_date = datetime.date(2002, 7, 14)
+   # person = Person("Liman", "Pavlo", "2002-07-14", "LiPa")
+   # print(person.get_age())
+   # print(person.get_fullname())
+
+   modifier("PersonFile.txt")
