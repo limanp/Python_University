@@ -11,6 +11,25 @@ class Person:
         self._nickname = nickname
         self._birth_date = self._date_string_to_datetime(birth_date)
 
+    @property
+    def surname(self):
+        return self._surname
+
+    @property
+    def first_name(self):
+        return self._first_name
+
+    @property
+    def nickname(self):
+        if self._nickname != "":
+            return self._nickname
+        else:
+            print("This person does not have nickname!")
+
+    @property
+    def birth_date(self):
+        return self._birth_date
+
     @staticmethod
     def _date_string_to_datetime(birth_date) -> datetime.date:
         date_split = birth_date.split('-')
@@ -31,18 +50,26 @@ class Person:
 
         return "{0} {1}".format(self._surname, self._first_name)
 
+
 def modifier(filename):
     with open(filename, "r") as PersonFile:
-        data = PersonFile.read().split("\n")
-        person = Person(data[0], data[1], data[2], data[3])
-        pass
+        data = PersonFile.readlines()
 
+        i = 0
+        while i < len(data):
+            data[i] = data[i].replace('\n', '')
+            i += 1
+
+        person = Person(data[0], data[1], data[2], data[3])
+
+    with open(filename, "w") as PersonFile:
+        PersonFile.write(person.first_name + "\n")
+        PersonFile.write(person.surname + "\n")
+        PersonFile.write(person.get_fullname() + "\n")
+        PersonFile.write(str(person.birth_date) + "\n")
+        PersonFile.write(person.nickname + "\n")
+        PersonFile.write(person.get_age())
 
 
 if __name__ == "__main__":
-   # b_date = datetime.date(2002, 7, 14)
-   # person = Person("Liman", "Pavlo", "2002-07-14", "LiPa")
-   # print(person.get_age())
-   # print(person.get_fullname())
-
-   modifier("PersonFile.txt")
+    modifier("PersonFile.txt")
