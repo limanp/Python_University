@@ -9,8 +9,9 @@ if os.path.exists('numbers.txt'):
         except:
             print("Помилка! У файлі є символи, що не являються числами")
     myFile.close()
+
     print(sum)
-    myFile = open('sum_numbers.txt', 'w')
+    myFile = open('sum_numbers.txt', 'w+', encoding='UTF-8')
     myFile.write(f"Сума чисел з файлу numbers.txt = {sum}")
     myFile.close()
 else:

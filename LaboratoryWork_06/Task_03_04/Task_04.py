@@ -1,4 +1,5 @@
 import os
+
 MyFile = open('learning_python.txt', encoding='utf-8')
 
 text = []

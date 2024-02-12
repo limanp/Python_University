@@ -6,6 +6,9 @@ for line in myFile:
     print(line.replace("\n", ""))
 
 text.sort(key=len, reverse=True)
-print()
-print(text)
+print('\nВідсортований список рядків від найбільшого до найменшого:')
+print('--------------------------------------------------')
+#print(text)
+for line in text:
+    print(line)
 myFile.close()

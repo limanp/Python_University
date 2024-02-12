@@ -63,11 +63,11 @@ def modifier(filename):
         person = Person(data[0], data[1], data[2], data[3])
 
     with open(filename, "w") as PersonFile:
-        PersonFile.write(person.first_name + "\n")
         PersonFile.write(person.surname + "\n")
+        PersonFile.write(person.first_name + "\n")
         PersonFile.write(person.get_fullname() + "\n")
-        PersonFile.write(str(person.birth_date) + "\n")
         PersonFile.write(person.nickname + "\n")
+        PersonFile.write(str(person.birth_date) + "\n")
         PersonFile.write(person.get_age())
 
 

@@ -20,12 +20,6 @@ def check_repeat_grade(grade_check, grades):
 def separation():
     return "========================================================================\n"
 
-
-# def replace_min_number(arr, number):
-#     index_min_num = arr.index(min(arr))
-#     arr[index_min_num] = number
-
-
 with open('marks.lab6.csv', encoding='UTF-8') as fileMarks:
     studentGrades = []
     countStudent = 0
